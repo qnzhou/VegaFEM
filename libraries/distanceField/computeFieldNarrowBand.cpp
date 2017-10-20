@@ -31,6 +31,10 @@
 #include <float.h>
 #include "performanceCounter.h"
 #include "vegalong.h"
+#include "distanceFieldNarrowBand.h"
+#include "objMeshOctree.h"
+#include "objMeshOffsetVoxels.h"
+using namespace std;
 
 #ifdef COMPUTE_SIGNED_FIELD_NARROWBAND
    #ifdef COMPUTE_INTERIOR_FIELD_NARROWBAND

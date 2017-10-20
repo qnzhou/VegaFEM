@@ -31,6 +31,8 @@
 #include <float.h>
 #include "objMeshGraph.h"
 #include "vegalong.h"
+#include "distanceField.h"
+using namespace std;
 
 #ifdef COMPUTE_SIGNED_FIELD
   #ifdef COMPUTE_FLOOD_FIELD

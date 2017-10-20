@@ -27,6 +27,7 @@
 /*
   Multithreaded computation of the distance field. Main computational routines.
 */
+#include "distanceFieldMT.h"
 
 #ifdef COMPUTE_SIGNED_FIELD
   #ifdef COMPUTE_FLOOD_FIELD

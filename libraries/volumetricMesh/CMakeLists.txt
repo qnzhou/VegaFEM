@@ -1,0 +1,41 @@
+SET(SRC_FILES
+	computeStiffnessMatrixNullspace.cpp
+	cubicMesh.cpp
+	generateGradientMatrix.cpp
+	generateInterpolationMatrix.cpp
+	generateMassMatrix.cpp
+	generateSurfaceMesh.cpp
+	generateTetMeshFromCubicMesh.cpp
+	interpolationWeightsMultiLoad.cpp
+	volumetricMeshDeformationGradient.cpp
+	volumetricMeshENuMaterial.cpp
+	volumetricMeshExtensions.cpp
+	volumetricMeshMooneyRivlinMaterial.cpp
+	volumetricMeshOrthotropicMaterial.cpp
+	generateMeshGraph.cpp
+	tetMesh.cpp
+	volumetricMesh.cpp
+	volumetricMeshLoader.cpp
+	volumetricMeshParser.cpp)
+SET(INC_FILES
+	computeStiffnessMatrixNullspace.h
+	cubicMesh.h
+	generateGradientMatrix.h
+	generateInterpolationMatrix.h
+	generateMassMatrix.h
+	generateSurfaceMesh.h
+	generateTetMeshFromCubicMesh.h
+	interpolationWeightsMultiLoad.h
+	volumetricMeshDeformationGradient.h
+	volumetricMeshENuMaterial.h
+	volumetricMeshExtensions.h
+	volumetricMeshMooneyRivlinMaterial.h
+	volumetricMeshOrthotropicMaterial.h
+	generateMeshGraph.h
+	tetMesh.h
+	volumetricMesh.h
+	volumetricMeshLoader.h
+	volumetricMeshParser.h)
+
+ADD_LIBRARY(volumetricMesh STATIC ${SRC_FILES} ${INC_FILES})
+TARGET_LINK_LIBRARIES(volumetricMesh sparseMatrix graph matrixIO objMesh minivector)
