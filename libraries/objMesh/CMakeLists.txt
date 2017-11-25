@@ -9,7 +9,7 @@ SET(SRC_FILES
 	objMeshOctree.cpp
 	objMeshOffsetVoxels.cpp
 	objMeshOrientable.cpp
-	objMeshRender.cpp
+    #objMeshRender.cpp
 	octree.cpp
 	simpleSphere.cpp
 	triangle-closestPoint.cpp
@@ -27,7 +27,7 @@ SET(INC_FILES
 	objMeshOctree.h
 	objMeshOffsetVoxels.h
 	objMeshOrientable.h
-	objMeshRender.h
+    #objMeshRender.h
 	octree.h
 	simpleSphere.h
 	triangle.h
