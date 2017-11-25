@@ -29,7 +29,9 @@
 //  Bounding Box
 //  Author: Jernej Barbic, CMU
 
+#if WITH_OPENGL
 #include "openGL-headers.h"
+#endif
 #include <float.h>
 #include <vector>
 #include <iostream>
@@ -165,6 +167,7 @@ bool BoundingBox::checkInside(const Vec3d & p) const
 
 void BoundingBox::render() const
 {
+#if WITH_OPENGL
   // render the bounding box
   Vec3d p0(bmin_[0],bmin_[1],bmin_[2]);
   Vec3d p1(bmax_[0],bmin_[1],bmin_[2]);
@@ -207,6 +210,7 @@ void BoundingBox::render() const
   glEnd();
 
   #undef VTX
+#endif
 }
 
 // should this be turned into a self-modifying function?

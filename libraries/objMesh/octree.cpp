@@ -29,7 +29,9 @@
 //  An octree storing triangles. Can be intersected with a sphere or a line segment.
 //  Jernej Barbic, CMU
 
+#ifdef WITH_OPENGL
 #include "openGL-headers.h"
+#endif
 #include <iostream>
 #include "octree.h"
 using namespace std;
@@ -256,6 +258,7 @@ int Octree<TriangleClass>::printRenderInfo = 0;
 template<class TriangleClass>
 void Octree<TriangleClass>::renderHelper(int level, int boxIndex)
 {
+#if WITH_OPENGL
   unsigned int  j;
   for(int i=0; i<8; i++)
     if(childrenNodes[i] != NULL)
@@ -283,6 +286,7 @@ void Octree<TriangleClass>::renderHelper(int level, int boxIndex)
     }
     renderCounter++;
   }
+#endif
 }
 
 template<class TriangleClass>

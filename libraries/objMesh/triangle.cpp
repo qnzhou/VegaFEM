@@ -37,7 +37,9 @@
   #pragma warning(disable : 4244)
 #endif
 
+#if WITH_OPENGL
 #include "openGL-headers.h"
+#endif
 #include <set>
 #include "triangle.h"
 #include "tribox3.h"
@@ -131,6 +133,7 @@ int TriangleBasic::lineSegmentIntersection(const Vec3d & segmentStart, const Vec
 
 void TriangleBasic::render() const
 {
+#if WITH_OPENGL
    Vec3d a = first_;
    Vec3d b = second_;
    Vec3d c = third_;
@@ -140,10 +143,12 @@ void TriangleBasic::render() const
      glVertex3f(b[0],b[1],b[2]);
      glVertex3f(c[0],c[1],c[2]);
    glEnd();
+#endif
 }
 
 void TriangleBasic::renderEdges() const
 {
+#if WITH_OPENGL
    Vec3d a = first_;
    Vec3d b = second_;
    Vec3d c = third_;
@@ -156,6 +161,7 @@ void TriangleBasic::renderEdges() const
      glVertex3f(c[0],c[1],c[2]);
      glVertex3f(a[0],a[1],a[2]);
    glEnd();
+#endif
 }
 
 template<class TriangleClass>
